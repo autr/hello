@@ -1,4 +1,3 @@
-console.log('Svelte')
 
 import fs from 'fs-extra'
 import preprocess from 'svelte-preprocess'
@@ -7,6 +6,7 @@ import glob from 'glob-promise'
 import autoAdaptor from '@sveltejs/adapter-auto'
 import staticAdaptor from '@sveltejs/adapter-static'
 import nodeAdaptor from '@sveltejs/adapter-node'
+const dev = process.argv.includes('dev');
 
 
 const adapters = {
@@ -62,6 +62,9 @@ export default (await ( async e => {
 		kit: {
 			alias,
 			adapter: adapters.static,
+			paths: {
+				base: '/hello'
+			},
 			files: {
 			  assets: 'assets',
 		      routes: 'src',
