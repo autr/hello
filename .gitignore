@@ -1,0 +1,16 @@
+.DS_Store
+node_modules
+/build
+/.svelte-kit
+/package
+.env
+.env.*
+!.env.example
+.vercel
+.output
+electron
+.idea
+assets/fonts
+node_modules
+fonts
+!src/fonts
