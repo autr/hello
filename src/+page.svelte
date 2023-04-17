@@ -19,7 +19,7 @@
 	async function loadFonts() {
 		for (let font of fonts) {
 			const name = font.split('.')?.[0]
-			const url = `pxfonts/${font}`
+			const url = `/hello/pxfonts/${font}`
 
 			try {
 				const response = await fetch(url)
